@@ -17,18 +17,30 @@ This implementation is based on the journal edition of the original paper, and g
 ![selective search example](doc/ss_sample.png)
 
 
-# Requirements
+# Requirements (on Conda)
 
+
+```
+conda install -c anaconda cmake=3.6.3
+conda install -c conda-forge boost=1.63.0  # boost.numpy comes with this
+```
+
+
+Setup paths to lib_boost_numpy and numpy.hpp in CmakeLists.txt  (line 10 and line 12).
+
+<!--
 * CMake (>= 3.3.2)
 * GCC (>= 4.8.2)
 * Python 2.7
     * For required packages, see `requirements.txt`
-* Boost (>= 1.58.0) built with python support
+<* Boost (>= 1.58.0) built with python support
     * If you get errors building the C++ for selective_search on Mac OS X you should install boost and boost-python via [brew](http://brew.sh/), compile them from source, and have them generate universal binaries:
       * `brew install --universal --build-from-source -vd boost`
       * `brew install --universal --build-from-source -vd boost-python`
 * [Boost.NumPy](https://github.com/ndarray/Boost.NumPy)
     * If you got an error building on Linux, see [belltailjp/Boost.NumPy](https://github.com/belltailjp/Boost.NumPy)); if you got an error building on Mac OS X, you probably need to generate a universal binary, see [https://github.com/BradNeuberg/Boost.NumPy])(https://github.com/BradNeuberg/Boost.NumPy) for a Mac OS X-specific fork of Boost.Numpy based on cmake.
+-->
+
 
 
 # Preparation
